@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="270dp">
+
+    <ProgressBar
+            android:id="@+id/wallpaper_item_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+        <ImageView
+                android:id="@+id/wallpaper_image_view"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        <TextView
+                android:background="@color/categoryBackgroundColor"
+                android:textColor="@color/colorWhite"
+                android:text="Nature"
+                android:padding="5dp"
+                android:textStyle="italic"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/wallpaper_name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <LinearLayout
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <CheckBox
+                    android:button="@drawable/fav_checkbox_selector"
+                    android:id="@+id/checkbox_favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <ImageButton
+                    android:background="@drawable/ic_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_share"/>
+            <ImageButton
+                    android:background="@drawable/ic_download"
+                    android:id="@+id/button_download"
+                    android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

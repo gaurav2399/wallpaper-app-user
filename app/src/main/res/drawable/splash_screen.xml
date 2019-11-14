@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--when we have to combine multiple drawable and images use layer list-->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/wallpaper_splash_bg"/>
+    <item android:width="200dp"
+          android:height="250dp"
+          android:drawable="@drawable/ic_text_splash"
+          android:gravity="center_horizontal"/>
+
+</layer-list>

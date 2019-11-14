@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.WallpapersActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/wallpaper_toolbar"
+                app:title="@string/app_name"
+                app:titleTextColor="@color/colorWhite"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+            android:orientation="vertical"
+            android:layout_below="@+id/wallpaper_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/wallpaper_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"/>
+
+        <ProgressBar
+                android:id="@+id/wallpaper_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"/>
+
+        <TextView
+                android:id="@+id/empty_wallpaper_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="There is no images in this category to show."
+                android:textSize="18sp"
+                android:textStyle="italic"
+                android:textColor="#292626"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"/>
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
